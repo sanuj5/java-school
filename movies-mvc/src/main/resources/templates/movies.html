@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+      <tr>
+        <th>TITLE</th>
+        <th>ACTOR</th>
+        <th>GENRE</th>
+        <th>COLLECTION</th>
+      </tr>
+      <tr th:each="movie : ${moviesList}">
+        <td><a th:href="@{/movie/{title}(title=${movie.title})}"><div th:text="${movie.title}"></div></a></td>
+        <td th:text="${movie.leadActor}">XYZ</td>
+        <td th:text="${movie.genre}">XYZ</td>
+        <td th:text="${movie.collection}">XYZ</td>
+      </tr>
+    </table>
+
+</body>
+</html>
